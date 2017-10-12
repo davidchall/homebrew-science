@@ -98,9 +98,9 @@ class Matplotlib < Formula
     sha256 "cd7b2d1018258d7247a71425e9f26463dfb444d411c39569972f4ce586b0c9d8"
   end
 
-  resource "functools32" do
-    url "https://files.pythonhosted.org/packages/c5/60/6ac26ad05857c601308d8fb9e87fa36d0ebf889423f47c3502ef034365db/functools32-3.2.3-2.tar.gz"
-    sha256 "f6253dfbe0538ad2e387bd8fdfd9293c925d63553f5813c4e587745416501e6d"
+  resource "backports.functools_lru_cache" do
+    url "https://files.pythonhosted.org/packages/00/9c/70c865c629d406531d05f46a5c5f68874f186bcc0424ed3bd7cbe54bfe7d/backports.functools_lru_cache-1.3.tar.gz"
+    sha256 "444a21bcec4ae177da554321f81a78dc879eaa8f6ea9920cb904830585d31e95"
   end
 
   resource "pyparsing" do
@@ -146,7 +146,7 @@ class Matplotlib < Formula
       res = if version.to_s.start_with? "2"
         resources.map(&:name).to_set
       else
-        resources.map(&:name).to_set - ["functools32", "subprocess32"]
+        resources.map(&:name).to_set - ["backports.functools_lru_cache", "subprocess32"]
       end
       res.each do |r|
         resource(r).stage do
