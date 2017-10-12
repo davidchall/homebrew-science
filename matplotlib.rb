@@ -99,8 +99,8 @@ class Matplotlib < Formula
   end
 
   resource "backports.functools_lru_cache" do
-    url "https://files.pythonhosted.org/packages/00/9c/70c865c629d406531d05f46a5c5f68874f186bcc0424ed3bd7cbe54bfe7d/backports.functools_lru_cache-1.3.tar.gz"
-    sha256 "444a21bcec4ae177da554321f81a78dc879eaa8f6ea9920cb904830585d31e95"
+    url "https://files.pythonhosted.org/packages/4e/91/0e93d9455254b7b630fb3ebe30cc57cab518660c5fad6a08aac7908a4431/backports.functools_lru_cache-1.4.tar.gz"
+    sha256 "31f235852f88edc1558d428d890663c49eb4514ffec9f3650e7f3c9e4a12e36f"
   end
 
   resource "pyparsing" do
